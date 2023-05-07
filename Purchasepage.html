@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Chocs Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <span class="logo">CHocs</span>
+        <div class="menubar">
+            <a class="link" href="./Homepage.html"> Home </a>
+            <a class="link" href="./Productpage.html">Our Products</a>
+            <a class="link" href="./LocationPage.html">Our Stores</a>
+            <a class="link" href="./AboutUs.Html">About Us</a>
+            <a id="buynow" href="./Purchasepage.html">Buy Now</a>
+        </div>
+
+        <label for="hamburger" id="hamburg1"></label>
+        <input type="checkbox" id="hamburger" onclick="hamburg()">
+
+        <div class="menu" >
+            <a class="bar" id="home" href="./Homepage.html"></a>
+            <a class="bar" id="prod" href="./Productpage.html"></a>
+            <a class="bar" id="locate" href="./LocationPage.html"></a>
+            <a class="bar" id="about" href="./AboutUs.Html"></a>
+            <a class="bar" id="purchase" href="./Purchasepage.html"></a>
+        </div>
+    </div>
+
+    <form id="form_purchase">
+        <br>
+
+        <label for="input-name">Name</label>
+        <input type="text" id="input-name" placeholder="Input your full name" oninput="validation(event)">
+        <div class="errorText" id="name-error"></div>
+
+        <br><br>
+
+        <label for="input-phone">Phone Number</label>
+        <input type="text" id="input-phone" placeholder="Input your phone number" oninput="validation(event)">
+        <div class="errorText" id="phone-error"></div>
+
+        <br><br>
+        
+        <label for="select-region">Region</label>
+        <select id="select-region" oninput="validation(event)">
+            <option value="none">Please select a region</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Jakarta">Jakarta</option>
+            <option value="Sanur">Sanur</option>
+        </select>
+        <div class="errorText" id="region-error"></div>
+
+        <br><br>
+
+        <label for="input-address">Address</label>
+        <input type="text" id="input-address" placeholder="Input your address" oninput="validation(event)">
+        <div class="errorText" id="add-error"></div>
+
+        <br><br>
+
+        <label>Products (Select and add the quantity in the blank box)</label>
+        <div>
+            <label for="dbox" class="checkbox">CHocs Dark Box ($21.99)</label> 
+            <input type="number" id="dbox_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="dbar" class="checkbox">CHocs Pure White Bar ($5.99)</label> 
+            <input type="number" id="wbar_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="dbar" class="checkbox">CHocs Pure Dark Bar ($7.99)</label> 
+            <input type="number" id="dbar_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="hbox" class="checkbox">CHocs Heart Box ($31.99)</label>
+            <input type="number" id="hbox_q" class="qbox" oninput="validation(event)"> 
+        </div>
+        <div>
+            <label for="htruf" class="checkbox">CHocs Hazelnut Truffle ($3.99)</label> 
+            <input type="number" id="htruf_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="mbox" class="checkbox">CHocs Milk Choco Gift Box ($26.99)</label> 
+            <input type="number" id="mbox_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="mbar" class="checkbox">CHocs Milk Choco Bar ($11.99)</label> 
+            <input type="number" id="mbar_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="wbox" class="checkbox">CHocs White Choco Gift Box ($18.99)</label> 
+            <input type="number" id="wbox_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div>
+            <label for="mixbox" class="checkbox">CHocs Mixed Choco Gift Box ($34.99)</label> 
+            <input type="number" id="mixbox_q" class="qbox" oninput="validation(event)">
+        </div>
+        <div class="errorText" id="check-error"></div>
+
+        <br><br>
+
+        <label>Payment Method</label>
+        <div>
+            <input type="radio" id="gopay" name="radio" value="gopay" oninput="validation(event)">
+            <label for="gopay"  class="radio_btn">Gopay</label>
+        </div>
+        <div>
+            <input type="radio" id="ovo" name="radio" value="ovo" oninput="validation(event)">
+            <label for="ovo" class="radio_btn">OVO</label>
+        </div>
+        <div>
+            <input type="radio" id="bca" name="radio" value="bca" oninput="validation(event)">
+            <label for="bca" class="radio_btn">BCA Mobile</label>
+        </div>
+        <div class="errorText" id="rad-error"></div>
+        
+
+        <button>SUBMIT</button>
+    </form>
+    <script src="script.js"></script>
+
+    <div id="footer">
+        <div class="foot_logo">
+            CHocs
+            <br>
+        </div>
+        <div>
+            <a  href="https://www.twitter.com"><img class="img2" src="./Assets/twitter.png" alt=""></a>
+            <a  href="https://www.facebook.com"><img class="img2" src="./Assets/facebook.png" alt=""></a>
+            <a  href="https://www.instagram.com"><img class="img2" src="./Assets/instagram.png" alt=""></a>
+            <a  href="https://www.youtube.com"><img class="img2" src="./Assets/youtube.png" alt=""></a>
+        </div>
+        <div class="foot_text">
+            <br>
+            Copyright © CHocs All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
